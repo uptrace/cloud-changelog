@@ -26,6 +26,8 @@ is updated, watch for changes in this repo.
 
   Tail-based sampling is enabled by default.
 
+- Starting from December 1st, users on the free tier won't be able to use tail-based sampling.
+
 ## Nov 1 2022
 
 - Added quick filters by `deployment.environment` and `service.name` attributes.

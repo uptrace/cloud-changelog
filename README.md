@@ -3,9 +3,20 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Dec 05 2022
+
+- Added ability to pin attributes/facets to the top.
+
+![Pinned facets](./image/2022-12-05_pinned-facets.png)
+
+## Nov 25 2022
+
+- Added ability to retry payments on the billing page.
+- You can now change payment details in Paddle without recreating a subscription.
+
 ## Nov 15 2022
 
-[Pricing](https://uptrace.dev/pricing/) page is updated with the following changes:
+[Pricing](https://uptrace.dev/pricing/) is updated with the following changes:
 
 - Added more volume-based discounts.
 
@@ -24,7 +35,7 @@ is updated, watch for changes in this repo.
   When tail-based sampling is enabled, Uptrace makes sure your budget is spent uniformly across the
   month so you always have fresh statistics.
 
-  Tail-based sampling is enabled by default.
+  Tail-based sampling is disabled by default.
 
 - Starting from December 1st, users on the free tier won't be able to use tail-based sampling.
 

@@ -3,9 +3,15 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Dec 15 2022
+
+- Added ability to save and restore views:
+
+![Saved views](./image/2022-12-15_saved-views.png)
+
 ## Dec 05 2022
 
-- Added ability to pin attributes/facets to the top.
+- Added ability to pin attributes/facets to the top:
 
 ![Pinned facets](./image/2022-12-05_pinned-facets.png)
 

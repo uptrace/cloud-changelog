@@ -3,6 +3,44 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Jan 2 2023
+
+- To ease navigation, all alerting-related pages are grouped under the "Alerts" tab.
+
+- You can now configure multiple Slack and PagerDuty notification channels. Channels are associated
+  with projects, not users.
+
+- You can specify notification channels immediately when creating metrics monitors.
+
+- Span groups are no longer automatically monitored. Instead, Uptrace converts spans to metrics and
+  you can monitor spans metrics using monitors.
+
+  By default, only 2 metrics are available: `uptrace.tracing.spans` and `uptrace.tracing.events`. In
+  future, you will be able to create custom metrics from spans.
+
+  Using `uptrace.tracing.spans` metric, you can monitor number of spans, errors, error rate, and
+  p50/p75/p90/p99 duration.
+
+- You can quickly create metrics monitors from span systems:
+
+  ![System monitor](./image/2023-01-02_system-monitor.png)
+
+  From services and hostnames:
+
+  ![Service monitor](./image/2023-01-02_service-monitor.png)
+
+  And metrics:
+
+  ![Metric monitor](./image/2023-01-02_metric-monitor.png)
+
+## Dec 27 2022
+
+- Improve logs and errors grouping.
+
+## Dec 16 2022
+
+- Allow to filter span facets by attribute key.
+
 ## Dec 15 2022
 
 - Added ability to save and restore views:

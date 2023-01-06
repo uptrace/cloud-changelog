@@ -15,8 +15,9 @@ is updated, watch for changes in this repo.
 - Span groups are no longer automatically monitored. Instead, Uptrace converts spans to metrics and
   you can monitor spans metrics using monitors.
 
-  By default, only 2 metrics are available: `uptrace.tracing.spans` and `uptrace.tracing.events`. In
-  future, you will be able to create custom metrics from spans.
+  By default, the following metrics are available: `uptrace.tracing.spans`,
+  `uptrace.tracing.events`, `uptrace.tracing.services`, and `uptrace.tracing.hosts`. In future, you
+  will be able to create custom metrics from spans.
 
   Using `uptrace.tracing.spans` metric, you can monitor number of spans, errors, error rate, and
   p50/p75/p90/p99 duration.

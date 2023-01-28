@@ -3,6 +3,20 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Jan 27 2023
+
+- You can now configure per-project sampling to sample a fraction of spans and drop the rest.
+
+  You can also adjust sampling fraction depending on span attributes, for example, you can have
+  different sampling fraction depending on `deployment.environment` attribute.
+
+  Visit the [Billing](https://app.uptrace.dev/billing) page to learn more.
+
+- You can now monitor number of sampled and dropped bytes to get notified when you receive more data
+  than usually.
+
+  ![Monitor number of bytes](./image/2023-01-27_monitor-bytes.png)
+
 ## Jan 2 2023
 
 - To ease navigation, all alerting-related pages are grouped under the "Alerts" tab.
@@ -16,8 +30,8 @@ is updated, watch for changes in this repo.
   you can monitor spans metrics using monitors.
 
   By default, the following metrics are available: `uptrace.tracing.spans`,
-  `uptrace.tracing.events`, `uptrace.tracing.services`, and `uptrace.tracing.hosts`. In future, you
-  will be able to create custom metrics from spans.
+  `uptrace.tracing.events`, `uptrace.billing.bytes`. In future, you will be able to create custom
+  metrics from spans.
 
   Using `uptrace.tracing.spans` metric, you can monitor number of spans, errors, error rate, and
   p50/p75/p90/p99 duration.

@@ -3,6 +3,14 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Feb 01 2023
+
+- Added an ability to create errors monitors in addition to metrics monitors. Using errors monitors,
+  you can include/exclude certain errors by span attributes, for example, to receive notifications
+  only for certain environments or services.
+
+  ![Monitor errors](./image/2023-02-01_monitor-errors.png)
+
 ## Jan 27 2023
 
 - You can now configure per-project sampling to sample a fraction of spans and drop the rest.

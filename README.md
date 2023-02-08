@@ -3,6 +3,13 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Feb 08 2023
+
+- Added a view to visualize spans query results as a chart. You can save the resulting view using
+  "Saved views" feature.
+
+  ![Spans query results](./image/2023-02-08_spans-timeseries.png)
+
 ## Feb 01 2023
 
 - Added an ability to create errors monitors in addition to metrics monitors. Using errors monitors,

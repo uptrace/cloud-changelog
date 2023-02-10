@@ -3,6 +3,15 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Feb 10 2023
+
+- Improved `uptrace.tracing.spans` and `uptrace.tracing.events` to fetch data directly from the
+  spans table. That means that you can now group and filter by all available span attributes.
+
+- Improved metrics UI to provide attribute facets just like with spans.
+
+  ![Metric facets](./image/2023-02-10_metric-facets.png)
+
 ## Feb 08 2023
 
 - Added a view to visualize spans query results as a chart. You can save the resulting view using

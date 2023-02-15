@@ -3,6 +3,14 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Feb 15 2023
+
+- Allow to create "Text gauges" at the top of dashboards.
+
+- Allow to quickly change grouping in the Table dashboards. Pinned attributes are displayed first.
+
+  ![Metric facets](./image/2023-02-15_text-gauges.png)
+
 ## Feb 10 2023
 
 - Improved `uptrace.tracing.spans` and `uptrace.tracing.events` to fetch data directly from the

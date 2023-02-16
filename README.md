@@ -3,6 +3,33 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Feb 16 2023
+
+- Added new notification channel: **webhooks**. Webhooks allow receiving notifications about alerts
+  managed by Uptrace via HTTP POST requests.
+
+  ![Webhooks](./image/2023-02-16_webhooks.png)
+
+  For example, you will receive the following JSON message when an alert is created:
+
+  ```json
+  {
+    "id": "1676471814931265794",
+    "eventName": "created",
+    "payload": { "custom_key": "custom_value" },
+    "createdAt": "2023-02-15T14:36:54.931265914Z",
+
+    "alert": {
+      "id": "123",
+      "url": "https://app.uptrace.dev/alerting/1/alerts/123",
+      "name": "Test message",
+      "type": "metric",
+      "state": "open",
+      "createdAt": "2023-02-15T14:36:54.931265914Z"
+    }
+  }
+  ```
+
 ## Feb 15 2023
 
 - Allow to create "Text gauges" at the top of dashboards.

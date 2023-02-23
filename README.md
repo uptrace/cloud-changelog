@@ -3,6 +3,12 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Feb 24 2023
+
+- Metrics dashboards now support 2 new visualizations types: **tables** and **heatmaps**.
+
+  ![Tables and heatmaps](./image/2023-02-23_heatmap-table.png)
+
 ## Feb 16 2023
 
 - Added new notification channel: **webhooks**. Webhooks allow receiving notifications about alerts

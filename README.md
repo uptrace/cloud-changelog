@@ -3,9 +3,17 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## March 6 2023
+
+- Allow to customize colors and some chart styles.
+
+  ![Table colors](./image/2023-03-06_table_colors.png)
+
+  ![Chart style](./image/2023-03-06_chart_style.png)
+
 ## March 5 2023
 
-- Added ability to name DSN.
+- Allow to to name DSN to simplify managing multiple DSNs.
 
   ![DSN name](./image/2023-03-05_dsn-name.png)
 

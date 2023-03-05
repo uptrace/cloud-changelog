@@ -3,6 +3,12 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## March 5 2023
+
+- Added ability to name DSN.
+
+  ![DSN name](./image/2023-03-05_dsn-name.png)
+
 ## Feb 24 2023
 
 - Metrics dashboards now support 2 new visualizations types: **tables** and **heatmaps**.

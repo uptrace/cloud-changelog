@@ -3,6 +3,12 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## March 9 2023
+
+- Allow to [edit dashboards](https://app.uptrace.dev/metrics/1/7?tab=yaml) using YAML format.
+
+  ![YAML dashboard](./image/2023-03-09_dash-yaml.png)
+
 ## March 6 2023
 
 - Allow to customize colors and some chart styles.

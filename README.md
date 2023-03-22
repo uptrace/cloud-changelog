@@ -3,6 +3,18 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## March 18 2023
+
+- Added AlertManager notification channel.
+
+  ![AlertManager](./image/2023-03-22_alertmanager.png)
+
+## March 15 2023
+
+- Allow to customize chart legends. Table and list-based legends are supported.
+
+  ![Chart legend](./image/2023-03-22_chart-legend.png)
+
 ## March 9 2023
 
 - Allow to [edit dashboards](https://app.uptrace.dev/metrics/1/7?tab=yaml) using YAML format.

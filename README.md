@@ -3,6 +3,22 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## March 20 2023
+
+- Added metrics [pricing](https://uptrace.dev/pricing).
+
+> > The cost of metrics is **$2 for 1000 timeseries**. Uptrace stores 1 datapoint per minute for
+> > each timeseries and uses the number of active datapoints to calculate the bill.
+
+> > Also, for every $5 spent on tracing or logs, you get 1000 timeseries for free. For example, if
+> > your tracing bill is $100, you get 20k timeseries for free.
+
+> > A timeseries is a metric with an unique set of attributes/labels. For example, if you collect 10
+> > metrics on each host and you have 10 hosts, that is 10\*10=100 timeseries.
+
+> > A datapoint is a single measured occurrence of a metric within a timeseries, consisting of a
+> > value and timestamp.
+
 ## March 18 2023
 
 - Added AlertManager notification channel.

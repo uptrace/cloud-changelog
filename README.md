@@ -8,7 +8,8 @@ is updated, watch for changes in this repo.
 - Histogram metric changed from `per_min($metric_name)` to `per_min(count($metric_name))` for
   clarity. Existing dashboards should be automatically updated.
 
-  You can now also use `per_min` as a general function, for example, `per_min(p50($metric_name))`.
+  You can now also use `per_min` as a general function, for example, `per_min(p50($metric_name))`
+  which is the equivalent of `p50($metric_name) / _minutes`.
 
 - Documented [Uptrace Enterprise](https://uptrace.dev/get/enterprise.html) features.
 

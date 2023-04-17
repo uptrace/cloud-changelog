@@ -12,6 +12,13 @@ is updated, watch for changes in this repo.
 
 - Documented [Uptrace Enterprise](https://uptrace.dev/get/enterprise.html) features.
 
+## Apr 5 2023
+
+- Accept errors and spans from [Sentry SDK](https://uptrace.dev/get/ingest/sentry.html). The
+  integration was created so you can use
+  [Sentry for browsers](https://uptrace.dev/get/ingest/sentry.html#sentry-for-browsers) with
+  Uptrace.
+
 ## March 20 2023
 
 - Added metrics [pricing](https://uptrace.dev/pricing).

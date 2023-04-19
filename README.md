@@ -3,6 +3,14 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Apr 19 2023
+
+- Add [AWS CloudWatch intergration](https://uptrace.dev/get/ingest/aws-cloudwatch.html) to collect
+  metrics and logs from AWS CloudWatch.
+
+- Add [FluentBit integration](https://uptrace.dev/get/ingest/fluent-bit.html) to ingest logs into
+  Uptrace.
+
 ## Apr 16 2023
 
 - Histogram metric changed from `per_min($metric_name)` to `per_min(count($metric_name))` for

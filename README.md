@@ -3,6 +3,17 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Apr 25 2023
+
+- Add a separate page to each organization that displays number or ingested bytes, spans, and
+  datapoints.
+
+  On that page you can also change **Paddle subscription** that is used to process payments.
+
+  To view org billing info, click Organizations -> Org Name -> Billing and usage.
+
+  ![Org usage](./image/2023-04-25_org-usage.png)
+
 ## Apr 19 2023
 
 - Add [AWS CloudWatch intergration](https://uptrace.dev/get/ingest/aws-cloudwatch.html) to collect

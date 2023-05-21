@@ -3,6 +3,20 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## May 21 2023
+
+- Added Spans, Logs, and Events system groups.
+- Uptrace now uses [display.name](https://uptrace.dev/get/grouping.html#display-name) instead of
+  `.name` and `.event_name` attributes.
+- You can now use `display.name contains "get|post"` to search spans, logs, and events.
+- Exceptions are now grouped together with `log.error` logs.
+
+  ![System groups](./image/2023-05-21_system-groups.png)
+
+## May 10 2023
+
+- Span attributes now start with a dot, for example, `.name` instead of `span.name`.
+
 ## Apr 25 2023
 
 - Add a separate page to each organization that displays number or ingested bytes, spans, and

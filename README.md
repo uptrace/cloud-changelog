@@ -8,8 +8,10 @@ is updated, watch for changes in this repo.
 - Added Spans, Logs, and Events system groups.
 - Uptrace now uses [display.name](https://uptrace.dev/get/grouping.html#display-name) instead of
   `.name` and `.event_name` attributes.
-- You can now use `display.name contains "get|post"` to search spans, logs, and events.
-- Exceptions are now grouped together with `log.error` logs.
+- You can now use `display.name contains "get|post"` to search for spans, logs, and events at the
+  same time.
+- Exceptions are now grouped together with `log.error` logs. You can still distinguish logs and
+  exceptions using `where exception.type exists`.
 
   ![System groups](./image/2023-05-21_system-groups.png)
 

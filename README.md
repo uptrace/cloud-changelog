@@ -3,6 +3,19 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Jun 17 2023
+
+- Add [Prometheus remote write](https://uptrace.dev/get/ingest/prometheus.html) support.
+
+## Jun 10 2023
+
+- Improve spans querying language, for example, `per_min(sum(http.read_bytes)) as read_per_min` is
+  now supported.
+
+## Jun 01 2023
+
+- Added [Vercel Logs](https://uptrace.dev/get/ingest/vercel.html) integration.
+
 ## May 21 2023
 
 - Added Spans, Logs, and Events system groups.
@@ -11,13 +24,14 @@ is updated, watch for changes in this repo.
 - You can now use `display.name contains "get|post"` to search for spans, logs, and events at the
   same time.
 - Exceptions are now grouped together with `log.error` logs. You can still distinguish logs and
-  exceptions using `where exception.type exists`.
+  exceptions using `where exception.type exists` filter.
 
   ![System groups](./image/2023-05-21_system-groups.png)
 
 ## May 10 2023
 
-- Span attributes now start with a dot, for example, `.name` instead of `span.name`.
+- Span attributes now start with a dot, for example, `.name` instead of `span.name`. In metrics,
+  this can lead to names like `$spans..name` and `$spans..status_code`.
 
 ## Apr 25 2023
 

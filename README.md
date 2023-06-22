@@ -3,6 +3,12 @@
 This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
 is updated, watch for changes in this repo.
 
+## Jun 22 2023
+
+- Add support for [Chart annotations](https://uptrace.dev/get/annotations.html).
+
+  ![Annotations](./image/2023-06-22_annotations.png)
+
 ## Jun 17 2023
 
 - Add [Prometheus remote write](https://uptrace.dev/get/ingest/prometheus.html) support.

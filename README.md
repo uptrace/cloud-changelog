@@ -1,8 +1,3 @@
-# Uptrace Cloud Changelog
-
-This is a changelog for [Uptrace.dev](https://uptrace.dev/). To get notifications when the changelog
-is updated, watch for changes in this repo.
-
 ## Jun 22 2023
 
 - Add support for [Chart annotations](https://uptrace.dev/get/annotations.html).

@@ -1,31 +1,49 @@
+## August 1 2023
+
+Added more user roles:
+
+- **Outside Collaborator**. Can be added to a team to access team projects.
+- **Member**. Can be added to a team to access team projects. Can create new projects.
+- **Any Viewer**. Can view any project in the org. Can create new projects.
+- **Any Admin**. Can admin any project in the org. Can create new projects.
+- **Billing Manager**. Can manage billing details. Can create new projects.
+- **Owner**. Has full administrative access to the entire organization.
+
+Added more notification channels:
+
+- Opsgenie
+- Telegram
+
+![Telegram notifications](./image/2023-08-01_telegram.png)
+
 ## July 25 2023
 
-- Added Single Sing-On support using OpenID Connect (OIDC) and SAML 2.0, for example,
-  [Google](https://uptrace.dev/get/sso/google.html), [Okta](https://uptrace.dev/get/sso/okta.html),
-  and [Keycloak](https://uptrace.dev/get/sso/keycloak.html).
+Added Single Sign-On support using OpenID Connect (OIDC) and SAML 2.0, for example,
+[Google](https://uptrace.dev/get/sso/google.html), [Okta](https://uptrace.dev/get/sso/okta.html),
+and [Keycloak](https://uptrace.dev/get/sso/keycloak.html).
 
-  Single Sign-On allows to manage users using OIDC or SAML providers. After logging in, such users
-  are automatically added to a team and can access team projects. When users are removed by the
-  provider, they automatically lose granted access.
+Single Sign-On allows to manage users using OIDC or SAML providers. After logging in, such users are
+automatically added to a team and can access team projects. When users are removed by the provider,
+they automatically lose granted access.
 
 ## June 22 2023
 
-- Add support for [Chart annotations](https://uptrace.dev/get/annotations.html).
+Add support for [Chart annotations](https://uptrace.dev/get/annotations.html).
 
-  ![Annotations](./image/2023-06-22_annotations.png)
+![Annotations](./image/2023-06-22_annotations.png)
 
 ## June 17 2023
 
-- Add [Prometheus remote write](https://uptrace.dev/get/ingest/prometheus.html) support.
+Add [Prometheus remote write](https://uptrace.dev/get/ingest/prometheus.html) support.
 
 ## June 10 2023
 
-- Improve spans querying language, for example, `per_min(sum(http.read_bytes)) as read_per_min` is
-  now supported.
+Improve spans querying language, for example, `per_min(sum(http.read_bytes)) as read_per_min` is now
+supported.
 
 ## June 01 2023
 
-- Added [Vercel Logs](https://uptrace.dev/get/ingest/vercel.html) integration.
+Add [Vercel Logs](https://uptrace.dev/get/ingest/vercel.html) integration.
 
 ## May 21 2023
 

@@ -1,3 +1,9 @@
+## August 28 2023
+
+Added support for dynamically adjusted sampling to stay withing the budget.
+
+![Dynamic sampling](./image/2023-08-28_dynamic-sampling.png)
+
 ## August 1 2023
 
 Added more user roles:

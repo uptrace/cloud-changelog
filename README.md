@@ -1,6 +1,14 @@
-## August 28 2023
+## September 12 2023
 
-Added support for dynamically adjusted sampling to stay withing the budget.
+- Added `uptrace.billing.spans` metric with the number of sampled and dropped spans/logs.
+
+![Sampled spans](./image/2023-09-12_sampled-spans.png)
+
+- The number of dropped bytes metric is removed, because it is not always possible to accurately
+  track this metric. The number of sampled bytes is still maintained.
+
+- Added support for dynamically adjusted sampling to stay within the budget. When enabled, sampling
+  is adjusted every 5 minutes.
 
 ![Dynamic sampling](./image/2023-08-28_dynamic-sampling.png)
 

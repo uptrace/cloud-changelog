@@ -1,3 +1,12 @@
+## September 29 2023
+
+- On the billing page, allow to set per-project budget and enable/disable dynamically adjusted
+  sampling.
+
+![Project budget](./image/2023-09-12_project-budget.png)
+
+- Implemented threading/grouping for email notifications.
+
 ## September 12 2023
 
 - Added `uptrace.billing.spans` metric with the number of sampled and dropped spans/logs.

@@ -7,6 +7,19 @@
 
 - Implemented threading/grouping for email notifications.
 
+- Migrated to the
+  [v1.21](https://github.com/open-telemetry/opentelemetry-specification/blob/main/schemas/1.21.0)
+  OpenTelemetry schema which introduced some breaking changes to attribute names.
+
+  Most notably:
+
+  - `http.method` is renamed to `http.request.method`.
+  - `http.status_code` is renamed to `http.response.status_code`.
+  - `http.client_ip` is renamed to `client.address`.
+
+  Uptrace should automatically handle both variants, but you may need to update your favorite
+  queries.
+
 ## September 12 2023
 
 - Added `uptrace.billing.spans` metric with the number of sampled and dropped spans/logs.

@@ -3,7 +3,7 @@
 - On the billing page, allow to set per-project budget and enable/disable dynamically adjusted
   sampling.
 
-![Project budget](./image/2023-09-12_project-budget.png)
+![Project budget](./image/2023-09-29_project-budget.png)
 
 - Implemented threading/grouping for email notifications.
 

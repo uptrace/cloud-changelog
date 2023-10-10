@@ -1,3 +1,41 @@
+## October 10 2023
+
+- You can now create custom [grouping rules](https://uptrace.dev/get/grouping-rules.html) for logs
+  and exceptions.
+
+  For example, you can configure Uptrace to create a separate error group for each unknown
+  PostgreSQL column:
+
+  ```
+  # Error messages
+  ERROR: column "event.created_at" does not exist (SQLSTATE=42703)
+  ERROR: column "updated_at" does not exist (SQLSTATE=42703)
+  ERROR: column "name" does not exist (SQLSTATE=42703)
+
+  # Pattern
+  log.severity=ERROR column column_name=<quoted,fingerprint> does not exist sqlstate=<kv>
+  ```
+
+- Added ability to specify aliases in the `group by` clause, for example,
+  `group by host.name as host`. This allows to join metrics with different attributes:
+
+  ```
+  $metric1 + $metric2 | group by $metric1.host.name | group by $metric2.host as host.name
+  ```
+
+- Added flapping alerts mitigations to metrics monitors.
+
+  ![Flapping alerts](./image/2023-10-10_flapping-alerts.png)
+
+- Migrated some metric attributes to the
+  [v1.21](https://github.com/open-telemetry/opentelemetry-specification/blob/main/schemas/1.21.0)
+  OpenTelemetry schema which introduced some breaking changes to attribute names.
+
+  Most notably:
+
+  - `http.method` is renamed to `http.request.method`.
+  - `http.status_code` is renamed to `http.response.status_code`.
+
 ## September 29 2023
 
 - On the billing page, allow to set per-project budget and enable/disable dynamically adjusted

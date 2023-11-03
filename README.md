@@ -1,3 +1,19 @@
+## November 3 2023
+
+- Added support for service graphs.
+
+  Service Graphs provide a visual representation of service interactions, dependencies, and
+  performance metrics. Service graphs are built by analyzing span relationships and require specific
+  span attributes.
+
+  ![Service graphs](./image/2023-11-03_service-graph.png)
+
+  The same data is also available as a metrics dashboard:
+
+  ![Service graph dashboard](./image/2023-11-03_service-graph-dashboard.png)
+
+- Added Microsoft Teams notification channel.
+
 ## October 10 2023
 
 - You can now create custom [grouping rules](https://uptrace.dev/get/grouping-rules.html) for logs

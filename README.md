@@ -1,3 +1,24 @@
+## January 2 2023
+
+- Improved metrics UI. Added ability to group items into rows.
+
+  ![Grid rows](./image/2024-01-01_grid-rows.png)
+
+- Added ability to use Uptrace as a
+  [Prometheus data source in Grafana](https://uptrace.dev/get/grafana.html). Uptrace uses the
+  original Prometheus engine so all Prometheus queries should be supported and you should be able to
+  use existing Grafana dashboards with the Uptrace data source.
+
+- Added ability to customize grouping when querying metrics, for example,
+  `sum(irate($cpu_secs by (mode, cpu)) by (mode)) / sum(irate($cpu_secs by (mode, cpu)))`.
+
+- Metric names and attributes are automatically changed to comply with Prometheus/Loki restrictions,
+  for example, `service.name` becomes `service_name`.
+
+- Added ability to view/create monitors from YAML.
+
+- Added Mattermost notification channel.
+
 ## November 3 2023
 
 - Added support for service graphs.

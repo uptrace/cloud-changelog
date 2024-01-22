@@ -1,4 +1,20 @@
-## January 2 2023
+## January 22 2024
+
+Uptrace is now mostly compatible with the Prometheus query language, for example, the following
+PromQL expressions are also valid in Uptrace:
+
+- `$metric_name{foo="xxx",bar~"yyy"}`
+- `increase($metric_name)` and `delta($metric_name)`
+- `rate($metric_name[5m])` and `irate($metric_name[5m])`
+- `avg_over_time($go_goroutines[5m])`
+- `avg by (foo)(sum by(foo, bar)($metric_name))`
+- `$metric_name offset 1w`
+- Math between series with automatic many-to-one/one-to-many vector matching, for example,
+  `sum($mem by (type)) / sum($mem) as mem`.
+
+See [documentation](https://uptrace.dev/get/promql-compat.html) for more details.
+
+## January 2 2024
 
 - Improved metrics UI. Added ability to group items into rows.
 

@@ -1,3 +1,20 @@
+## March 23 2024
+
+- Added support for dark mode. Dark mode should be enabled automatically if your operating system
+  uses a dark theme. It can also be enabled manually using the switch in the upper right corner.
+
+- The `http` system is split into `httpclient` and `httpserver` depending on the span kind. You can
+  learn more about systems [here](https://uptrace.dev/get/grouping.html#span-systems).
+
+  If the feedback is positive, we're going to do the same for the `rpc` system.
+
+- You can now increase data retention on the Project Settings page for an additional fee.
+
+- Single sign-on now allows you to specify a regexp to validate user emails, for example, you can
+  only allow users with a certain domain.
+
+- Navigation is reworked using a navigation drawer.
+
 ## January 22 2024
 
 Uptrace is now mostly compatible with the Prometheus query language, for example, the following

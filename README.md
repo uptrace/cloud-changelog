@@ -1,3 +1,33 @@
+## April 9 2024
+
+- Both traces and metrics now support the following functions: `extract(haystack, pattern)`,
+  `replace(haystack, substring, replacement)`, and `replace_regexp(haystack, pattern, replacement)`.
+
+  These functions are most useful in grouping expressions, for example:
+
+  ```
+  group by extract(host_name, `^uptrace-prod-(\w+)$`) as host
+  group by replace_regexp(host_name, `^some-prefix-(\w+)$`, `\1`) as host
+  ```
+
+  See [documentation](https://uptrace.dev/get/querying-metrics.html#manipulating-attributes) for
+  details.
+
+- You can use dot notation to access sub-fields in nested structures such as JSON, for example,
+  `data.key1.subkey1` can extract the field value from the following JSON:
+
+  ```json
+  {
+    "data": {
+      "key1": {
+        "subkey1": "value1"
+      }
+    }
+  }
+  ```
+
+  This does not work for arrays.
+
 ## March 23 2024
 
 - Added support for dark mode. Dark mode should be enabled automatically if your operating system

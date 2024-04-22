@@ -1,3 +1,9 @@
+## Unreleased
+
+- `log_message` and `exception_message` are automatically promoted to `display_name` when used in logs. The original attribute is removed to avoid double indexing.
+
+  Instead of `log_message contains "something"` you should use `display_name contains "something"`.
+
 ## April 14 2024
 
 Added support for two-factor authentication (2FA) using a one-time password.

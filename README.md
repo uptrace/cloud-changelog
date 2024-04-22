@@ -1,8 +1,10 @@
-## Unreleased
+## Apr 22 2024
 
-- `log_message` and `exception_message` are automatically promoted to `display_name` when used in logs. The original attribute is removed to avoid double indexing.
+- `log_message` and `exception_message` attributes are automatically promoted to `display_name` when used in logs. The original attribute is removed to avoid double indexing.
 
-  Instead of `log_message contains "something"` you should use `display_name contains "something"`.
+  Instead of `log_message contains "something"` you should use `display_name contains "something"`. The default search will continue to work as previously.
+
+- Removed `_kind` and `_status_code` attributes from the logs and events, because the OpenTelemetry data model does not support such attributes. Previously, these attributes were inherited from spans when possible.
 
 ## April 14 2024
 

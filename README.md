@@ -1,3 +1,15 @@
+## May 6 2024
+
+The quick search now allows to specify the search attribute:
+
+- `_kind:client`. Include items with "\_kind" containing "client".
+- `-key:value`. Exclude items with "key" containing "value".
+- `~msg:regexp`. Include items with "msg" matching the "regexp".
+
+Besides, the `_count` is no longer an alias for `sum(_count)`, but instead points to the column holding the adjusted count. Now you should use `sum(_count)` and `per_min(sum(_count))` to count the number of items.
+
+`_error_rate` is still supported and is an alias for `sum(_error_count) / sum(_count)`.
+
 ## Apr 22 2024
 
 - `log_message` and `exception_message` attributes are automatically promoted to `display_name` when used in logs. The original attribute is removed to avoid double indexing.

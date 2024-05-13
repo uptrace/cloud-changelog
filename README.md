@@ -1,3 +1,19 @@
+## May 13 2024
+
+Error monitors have been reworked:
+
+- You can use all available filters to include/exclude monitored errors. You can also customize default filters to monitor `WARN` logs.
+
+- You can add `group by` clauses to customize the default errors grouping and create a separate alert/notification, for example, `group by _group_id, service_name, cloud_region`.
+
+- Uptrace no longer creates alerts for excluded errors.
+
+- Notifications frequency no longer depends on the error count and instead notifies you every 1/6/24+ hours.
+
+Existing error monitors should be converted automatically. No action is required.
+
+Existing alerts are removed, so you should see an increase in error notifications for a few days.
+
 ## May 6 2024
 
 The quick search now allows to specify the search attribute:

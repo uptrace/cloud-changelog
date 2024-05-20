@@ -1,3 +1,11 @@
+## May 20 2024
+
+- You can now tag saved view to organize them into categories.
+
+- Alert filters are reworked after tracing and metrics filters. You can now pin/unpin attributes.
+
+- Uptrace now supports all OpenTelemetry [severity levels](https://opentelemetry.io/docs/specs/otel/logs/data-model/#displaying-severity) such as `TRACE1`, `TRACE2`, `TRACE3`, etc. System names remain unchanged, for example, `log:trace`, `log:info`, `log:warn`, etc.
+
 ## May 13 2024
 
 Error monitors have been reworked:

@@ -1,3 +1,11 @@
+## May 28 2024
+
+Both tracing and metrics now support more complex WHERE such as `(service_name = "s1" AND log_severity = "DEBUG") OR (service_name = "s2" AND log_severity = "INFO")`.
+
+Tracing now allows you to use [If](https://clickhouse.com/docs/en/sql-reference/aggregate-functions/combinators#-if) combinator from ClickHouse, for example, `countIf(_status_code = "error")` or `sumIf(_count, service_name = "s1")`. With metrics, you can achieve the same with `count($spans{_status_code="error"})`.
+
+Filters now behave differently when the attribute does not exist, for example, `where attr1 = ""` excludes spans that don't have the attribute. You can get the old behavior by using `where attr1 = "" or attr1 does not exist`.
+
 ## May 20 2024
 
 - You can now tag saved view to organize them into categories.

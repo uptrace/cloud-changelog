@@ -1,3 +1,21 @@
+## June 14 2024
+
+Uptrace now supports incremental query mode when searching or filtering spans/logs, which allows to search over large periods of time.
+
+It works like this:
+
+- Incremental mode is enabled when searching or filtering, i.e. it does not work without search or filters.
+
+- Uptrace incrementally searches spans/logs hour by hour and sends you search results every 5 seconds.
+
+- The incremental search will stop after 20 seconds, but you can continue searching by pressing the "Continue" button.
+
+- Search results are stored in a special table and are deleted after 10 days. If you try the same search on another day, it will continue from the last saved point.
+
+For now, this optimization does not work when searching over groups and loading filter facets. It will be added later this month.
+
+![Incremental search](./image/2024-06-14-incremental.png)
+
 ## May 28 2024
 
 Both tracing and metrics now support more complex WHERE such as `(service_name = "s1" AND log_severity = "DEBUG") OR (service_name = "s2" AND log_severity = "INFO")`.

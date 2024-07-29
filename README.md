@@ -1,3 +1,23 @@
+## July 29 2024
+
+When [searching spans and logs](https://uptrace.dev/get/searching-spans.html), a word filter now matches full words/tokens. If you want to search for logs that contain a certain prefix, just add \* to the end of the word.
+
+For example, the query `err*` will find the following logs:
+
+```
+err
+error
+an_error
+```
+
+You can also search over all attribute values using `_attrs` scope:
+
+```
+_attrs:error
+```
+
+See [documentation](https://uptrace.dev/get/searching-spans.html) for more details.
+
 ## June 14 2024
 
 Uptrace now supports incremental query mode when searching or filtering spans/logs, which allows to search over large periods of time.

@@ -1,3 +1,16 @@
+## August 12 2024
+
+You can now transform ingested data directly in Uptrace without using OpenTelemetry Collector. The following operations are supported:
+
+- `rename_attr` allows to change the attribute name.
+- `delete_attrs` allows to delete attributes by their exact name or by a regular expression.
+- `keep_attrs` allows to keep some attributes and delete the rest.
+- `drop` allows to drop matching spans/events/logs/datapoints.
+- `sample` allows to sample a fraction of spans/events/logs.
+- `script` enables writing simple scripts to parse attributes, reduce attributes cardinality, turn logs into spans, etc.
+
+See [documentation](https://uptrace.dev/get/transformations.html) for details.
+
 ## July 29 2024
 
 When [searching spans and logs](https://uptrace.dev/get/searching-spans.html), a word filter now matches full words/tokens. If you want to search for logs that contain a certain prefix, just add \* to the end of the word.

@@ -1,3 +1,35 @@
+## November 18 2024
+
+### Metrics
+
+- Added [if](http://localhost:8080/get/querying-metrics.html#grouping) function to conditionally join timeseries.
+
+  For example, you can use `if` to calculate the hit rate only if the number of hits and misses exceeds a certain threshold:
+
+  ```
+  if(
+    sum(shits) + sum($misses) >= 100,
+    sum($misses) / (sum($hits) + sum($misses)),
+    1
+  ) as hit_rate
+  ```
+
+- Uptrace can now fill holes in timeseries using the previous value in the specified time range. This feature is enabled by default, but you can disable it in the dashboard settings.
+
+  ![Fill holes](./image/2024-11-18_fill-holes.png)
+
+- Added `clamp_min` and `clamp_max` [transform](https://uptrace.dev/get/querying-metrics.html#grouping) functions.
+
+### Tracing
+
+- You can now save current query as a table in a metrics dashboard.
+
+  ![Save query](./image/2024-11-18_save-query.png)
+
+- Added `apdex(500ms, 3s)` function to calculate apdex score.
+
+- Added ability to specify [type](https://uptrace.dev/get/querying-spans.html#types) hints on attributes, for example, `foo::string | bar::int | baz::float`. This is only needed if the sample attribute has different types in different spans.
+
 ## August 12 2024
 
 You can now transform ingested data directly in Uptrace without using OpenTelemetry Collector. The following operations are supported:

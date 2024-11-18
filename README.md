@@ -2,7 +2,7 @@
 
 ### Metrics
 
-- Added [if](http://localhost:8080/get/querying-metrics.html#grouping) function to conditionally join timeseries.
+- Added [if](https://uptrace.dev/get/querying-metrics.html#if) function to conditionally join timeseries.
 
   For example, you can use `if` to calculate the hit rate only if the number of hits and misses exceeds a certain threshold:
 
@@ -18,7 +18,7 @@
 
   ![Fill holes](./image/2024-11-18_fill-holes.png)
 
-- Added `clamp_min` and `clamp_max` [transform](https://uptrace.dev/get/querying-metrics.html#grouping) functions.
+- Added `clamp_min` and `clamp_max` [transform](https://uptrace.dev/get/querying-metrics.html#transform) functions.
 
 ### Tracing
 

@@ -28,7 +28,7 @@
 
 - Added `apdex(500ms, 3s)` function to calculate apdex score.
 
-- Added ability to specify [type](https://uptrace.dev/get/querying-spans.html#types) hints on attributes, for example, `foo::string | bar::int | baz::float`. This is only needed if the sample attribute has different types in different spans.
+- Added ability to specify [type](https://uptrace.dev/get/querying-spans.html#types) hints on attributes, for example, `foo::string | bar::int | baz::float`. This is only needed if an attribute has different types in different spans.
 
 ## August 12 2024
 

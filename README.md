@@ -8,7 +8,7 @@
 
   ```
   if(
-    sum(shits) + sum($misses) >= 100,
+    sum($hits) + sum($misses) >= 100,
     sum($misses) / (sum($hits) + sum($misses)),
     1
   ) as hit_rate

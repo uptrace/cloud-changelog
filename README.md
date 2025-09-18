@@ -1,3 +1,47 @@
+## September 18 2025
+
+- Added [Index Map](https://uptrace.dev/features/transformations#index-map) operation that will replace the default map indexing done by Uptrace.
+
+For example, the following attribute cannot be queried using the `object.nested.foo` path:
+
+```json
+{
+  "object": {
+    "nested": {
+      "foo": "bar",
+      "hello": "world"
+    }
+  }
+}
+```
+
+To index such attributes, use the `index_map` operation:
+
+```yaml
+name: Index the object attribute
+scope: [spans]
+type: index_map
+
+# Map attributes to index.
+maps: ['object']
+
+# Map paths to include.
+include_paths: ['object.nested.foo']
+include_regexp: '^object.nested\.'
+
+# Map paths to exclude.
+exclude_paths: ['object.nested.hello']
+exclude_regexp: 'secret'
+```
+
+The default indexing is **deprecated** and will be removed by the end of the year.
+
+- You can customize alert names by specifying a Go template string as the monitor name when creating a monitor, for example, `{{ .Attrs.deployment_environment_name }}: {{ .DisplayName }}` will prefix the alert name with the deployment environment attribute.
+
+- When using webhook notifications with error monitors, Uptrace now includes the `log` field containing the log that triggered the notification.
+
+- You can now change the default queries in Spans, Logs, and Events tabs.
+
 ## November 18 2024
 
 ### Metrics
@@ -18,7 +62,7 @@
 
   ![Fill holes](./image/2024-11-18_fill-holes.png)
 
-- Added `clamp_min` and `clamp_max` [transform](https://uptrace.dev/get/querying-metrics.html#transform) functions.
+- Added `clamp_min` and `clamp_max` [transform](https://uptrace.dev/features/querying/metrics#transform) functions.
 
 ### Tracing
 
@@ -28,7 +72,7 @@
 
 - Added `apdex(500ms, 3s)` function to calculate apdex score.
 
-- Added ability to specify [type](https://uptrace.dev/get/querying-spans.html#types) hints on attributes, for example, `foo::string | bar::int | baz::float`. This is only needed if an attribute has different types in different spans.
+- Added ability to specify [type](https://uptrace.dev/features/querying/spans#types) hints on attributes, for example, `foo::str | bar::int | baz::float`. This is only needed if an attribute has different types in different spans.
 
 ## August 12 2024
 
@@ -256,7 +300,6 @@ See [documentation](https://uptrace.dev/get/promql-compat.html) for more details
 - Migrated some metric attributes to the [v1.21](https://github.com/open-telemetry/opentelemetry-specification/blob/main/schemas/1.21.0) OpenTelemetry schema which introduced some breaking changes to attribute names.
 
   Most notably:
-
   - `http.method` is renamed to `http.request.method`.
   - `http.status_code` is renamed to `http.response.status_code`.
 
@@ -271,7 +314,6 @@ See [documentation](https://uptrace.dev/get/promql-compat.html) for more details
 - Migrated to the [v1.21](https://github.com/open-telemetry/opentelemetry-specification/blob/main/schemas/1.21.0) OpenTelemetry schema which introduced some breaking changes to attribute names.
 
   Most notably:
-
   - `http.method` is renamed to `http.request.method`.
   - `http.status_code` is renamed to `http.response.status_code`.
   - `http.client_ip` is renamed to `client.address`.

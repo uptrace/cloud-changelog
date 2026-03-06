@@ -1,3 +1,22 @@
+## March 06 2026
+
+- Added a built-in MCP server that can create YAML dashboards using your LLM. See your Project page for setup instructions.
+
+  Creating dashboards is now as simple as:
+  1. Send metrics to Uptrace using [OpenTelemetry Collector](https://uptrace.dev/ingest/collector) or [Prometheus](https://uptrace.dev/ingest/prometheus).
+  2. Ask your LLM to create Uptrace dashboards based on the available metrics.
+
+  We plan to expand MCP support to also allow:
+  - Converting Grafana dashboards to Uptrace dashboards.
+  - Writing queries and creating monitors.
+  - Retrieving traces and executing queries to assist with debugging.
+
+- Working on AI-managed incidents. The LLM will organize multiple alerts into incidents, adjust alert priority, and assist with gathering context for faster resolution.
+
+- Added a Traces section that allows you to [filter traces](https://uptrace.dev/features/querying/traces) based on the spans, logs, and events they contain.
+
+- Uptrace pricing will be [adjusted](https://uptrace.dev/blog/pricing-update-april-2026) on April 10, 2026. Org owners will receive an email notification.
+
 ## September 18 2025
 
 - Added [Index Map](https://uptrace.dev/features/transformations#index-map) operation that will replace the default map indexing done by Uptrace.
